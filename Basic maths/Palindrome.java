@@ -1,6 +1,6 @@
-public class Reverseanumber {
+public class Palindrome {
     public static void main(String[] args) {
-    int N = 123;
+    int N = 121;
     int num = N;
     int reverse = 0;
     while(N!=0)
@@ -9,7 +9,10 @@ public class Reverseanumber {
         reverse = reverse*10+digit;
         N = N/10;
     }
-    System.out.println("Given number:"+ num);
-    System.out.println("Reverse number:"+reverse);
+    if(num == reverse){
+        System.out.println("Yes Palindrome");
+    }else{
+        System.out.println("Not Palindrome");
+    }
     }
 }
