@@ -37,3 +37,4 @@ public static void main(String[] args) {
    func(1,n);
 } 
 }
+// time coplexity  & space complexity = O(n)
