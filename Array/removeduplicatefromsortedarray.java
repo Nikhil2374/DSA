@@ -1,4 +1,4 @@
-package Array;
+/*package Array;
 
 public class removeduplicatefromsortedarray {
     public static boolean isSorted(int array[], int n){
@@ -15,4 +15,4 @@ public class removeduplicatefromsortedarray {
         int n = array.length;
         System.out.println(isSorted(array,n));
     }
-}
+}*/
