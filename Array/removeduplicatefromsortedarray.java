@@ -1,18 +1,30 @@
-/*package Array;
+package Array;
+import java.util.*;
 
+//Brute force approach
 public class removeduplicatefromsortedarray {
-    public static boolean isSorted(int array[], int n){
-        for(int i=1; i<n; i++){
-           if(array[i] == array[i-1]){
-            return false;
-           }       
+    static int removeduplicate(int[] arr) {
+        HashSet < Integer > set = new HashSet < > ();
+        for (int i = 0; i < arr.length; i++) {
+            set.add(arr[i]);
         }
-        return true;
+        int k = set.size();
+        int j = 0;
+        for (int x: set) {
+            arr[j++] = x;
+        }
+        return k;
     }
 
     public static void main(String[] args) {
-        int array[] = { 5, 7, 6, 4, 5 };
-        int n = array.length;
-        System.out.println(isSorted(array,n));
+        int arr[] = {1,1,2,2,2,3,3};
+        int k = removeduplicate(arr);
+        System.out.println("The array after removing duplicate elements is ");
+        for (int i = 0; i < k; i++) {
+            System.out.print(arr[i] + " ");
+        }
     }
-}*/
+   
+}
+
+//Optimal approach
