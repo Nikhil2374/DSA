@@ -1,6 +1,9 @@
 package Array;
-import java.util.*;
+
+
+
 //Bruute Force Approach
+/* 
 public class MoveZeroesToEndOfArray {
     public static int[] moveZeros(int n, int a[]){
         //temporary array:
@@ -42,5 +45,49 @@ public class MoveZeroesToEndOfArray {
 
 
 
-}
+}*/
 //Optimized Approach
+public class MoveZeroesToEndOfArray {
+
+    public static int[] moveZeros(int n, int[] a) {
+        int j = -1;
+        for (int i = 0; i < n; i++) {
+            if (a[i] == 0) {
+                j = i;
+                break;
+            }
+        }
+        for (int i = j + 1; i < n; i++) {
+            if (a[i] != 0) {
+                j++;
+                int temp = a[i];
+                a[i] = a[j];
+                a[j] = temp;
+            }
+        }
+        /* Eliminating the first loop
+        int j = 0;
+        for (int i = 0; i < n; i++) {
+            if (a[i] != 0) {
+                if (i != j) {
+                    int temp = a[i];
+                    a[i] = a[j];
+                    a[j] = temp;
+                }
+                j++;
+            }
+        }
+         */
+        return a;
+    }
+
+    public static void main(String[] args) {
+        int array[] = { 1, 0, 2, 3, 2, 0, 0, 4, 5, 1 };
+        int n = array.length;
+        int[] ans = moveZeros(n, array);
+        for (int i = 0; i < n; i++) {
+            System.out.print(ans[i] + " ");
+        }
+        System.out.println("");
+    }
+}
