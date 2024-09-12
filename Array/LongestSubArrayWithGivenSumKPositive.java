@@ -31,6 +31,7 @@ public class LongestSubArrayWithGivenSumKPositive {
 }
 */
 //Approach 2
+/* 
 public class LongestSubArrayWithGivenSumKPositive {
     public static int getLongestSubarray(int []a, long k) {
         int n = a.length; // size of the array.
@@ -57,4 +58,5 @@ public class LongestSubArrayWithGivenSumKPositive {
         System.out.println("The length of the longest subarray is: " + len);
     }
 }
-    
+*/
+//Beter approach
