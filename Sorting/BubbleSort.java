@@ -1,5 +1,7 @@
 package Sorting;
 
+import java.util.Scanner;
+
 public class BubbleSort {
 
     static void bubble_sort(int[] arr, int n) {
@@ -19,14 +21,36 @@ public class BubbleSort {
         }
         System.out.println();
     }
-    public static void main(String args[]) {
-        int arr[] = {13, 46, 24, 52, 20, 9};
-        int n = arr.length;
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        // Input the size of the array
+        System.out.println("Enter the number of elements in the array: ");
+        int n = sc.nextInt();
+        
+        // Create an array of size n
+        int[] arr = new int[n];
+        
+        // Input the elements of the array
+        System.out.println("Enter the elements of the array: ");
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+        
+        // Display the array before sorting
         System.out.println("Before Using Bubble Sort: ");
         for (int i = 0; i < n; i++) {
             System.out.print(arr[i] + " ");
         }
         System.out.println();
+        
+        // Call the bubble sort function
         bubble_sort(arr, n);
+        
+        // Display the array after sorting
+        System.out.println("After Using Bubble Sort: ");
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i] + " ");
+        }
     }
 }
