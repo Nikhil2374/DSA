@@ -16,9 +16,10 @@ public class RemoveDuplicateCharacterInString {
         //char is used to convert the integer value to character
         //c is a variable that stores the character value
         //sb is a string builder that stores the character value
+        //-> is a lambda operator that is used to separate the parameter and the body of the lambda expression
         System.out.println(sb.toString());
 
-        //Method 2: using LinkedHashSet
+        //Method 2: using indexOf() method
 
     }
 }
